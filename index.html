@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="stoppage.png" type="image/x-icon" />
+    <title>PH-Travel</title>
+
+    <!-- tailwind & daisy link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- custom css -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+      .root{
+        margin: 0;
+        padding: 0;
+      }
+      .raleway-font {
+        font-family: "Raleway", sans-serif;
+      }
+      .inter-font {
+        font-family: "Inter", sans-serif;
+      }
+      .color-prime {
+        color: #1dd100;
+      }
+      .bg-prime {
+        background-color: #1dd100;
+      }
+      .border-fill {
+        border: 1px solid;
+        border-color: #1dd10066;
+      }
+      .color-second {
+        color: #1dd1001a;
+      }
+      .banner-bg {
+        background: linear-gradient(
+            180deg,
+            rgba(3, 7, 18, 0.5),
+            rgba(3, 7, 18, 0) 100%
+          ),
+          url("images/banner.png");
+      }
+    </style>
+  </head>
+  <body class="w-full mx-auto container">
+    <!-- header section  -->
+    <header class="mx-28 mt-8">
+      <!-- nav section -->
+
+      <nav class="raleway-font">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost text-xl font-extrabold">P-Ticket</a>
+          </div>
+          <div class="navbar-center hidden lg:flex font-medium">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a
+              class="btn px-6 py-3 border bg-[#1DD1001A] hover:bg-white border-fill flex justify-center items-center m-0"
+              >Bus <img src="images/bus-icon.png" alt="bus-icon"
+            /></a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- banner section -->
+
+      <section
+        class="banner-bg bg-cover bg-no-repeat bg-center border rounded-3xl px-48 py-16 my-8 w-full relative"
+      >
+        <!-- banner-content -->
+        <div class="text-center space-y-4">
+          <h1 class="raleway-font text-white text-6xl font-extrabold">
+            End-to-End Travel with <br /><span class="color-prime"
+              >P Paribahan</span
+            >
+          </h1>
+          <p class="inter-font text-lg font-normal text-white text-center">
+            Yes, you can run unit tests and view the results directly within the
+            app. The <br />
+            integrated testing features allow for a streamlined .
+          </p>
+          <button
+            class="bg-prime p-3 border-none rounded-lg raleway-font font-bold text-black"
+          >
+            Buy Ticket
+          </button>
+        </div>
+        <div
+          class="flex justify-center items-center gap-6 relative left-0 right-0 top-28"
+        >
+          <!-- card-one -->
+          <div
+            class="flex justify-center items-center bg-white border-b-4 border-[#1DD100] rounded-3xl px-6 py-3 w-80"
+          >
+            <div>
+              <img src="images/people.png" alt="popl" />
+            </div>
+            <div>
+              <h1 class="raleway-font font-bold text-3xl">500K+</h1>
+              <p class="inter-font font-normal">Registered users</p>
+            </div>
+          </div>
+          <!-- card-two -->
+          <div
+            class="flex justify-center items-center bg-white border-b-4 border-[#1DD100] rounded-3xl px-6 py-3 w-80"
+          >
+            <div>
+              <img src="images/ticket-cupon.png" alt="popl" />
+            </div>
+            <div>
+              <h1 class="raleway-font font-bold text-3xl">1.7 lacks</h1>
+              <p class="inter-font font-normal">Tickets sold</p>
+            </div>
+          </div>
+          <!-- card-three -->
+          <div
+            class="flex justify-center items-center bg-white border-b-4 border-[#1DD100] rounded-3xl px-6 py-3 w-80"
+          >
+            <div>
+              <img src="images/stoppage.png" alt="popl" />
+            </div>
+            <div>
+              <h1 class="raleway-font font-bold text-3xl">80K+</h1>
+              <p class="inter-font font-normal">Rental partners</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="mt-36">
+      <!-- best-offer-section -->
+      <section class="mx-28 mb-32">
+        <h1 class="raleway-font font-bold text-4xl text-black text-center mb-12">
+          Best offers for you
+        </h1>
+
+        <!-- cuppon-card-section -->
+        <section class="flex justify-center items-center w-full gap-8 mb-16">
+          <!-- cuppon-card-one -->
+          <div
+            class="bg-[#FFBF0F] border-none rounded-3xl w-full flex justify-around items-center"
+          >
+            <div class="inter-font">
+              <h1 class="text-4xl font-extrabold text-black">15% OFF</h1>
+              <p class="text-xl text-black">on your next purchase</p>
+              <p class="text-base">use by January 2024</p>
+            </div>
+            <img src="images/cupon-devider.png" alt="" />
+            <div class="raleway-font">
+              <h1 class="text-3xl font-bold">NEW15</h1>
+              <p class="text-base">Coupon Code</p>
+            </div>
+          </div>
+          <!-- cuppon-card-two -->
+          <div
+            class="bg-[#F78C9C] border-none rounded-3xl w-full flex justify-around items-center"
+          >
+            <div class="inter-font">
+              <h1 class="text-4xl font-extrabold text-black">20% OFF</h1>
+              <p class="text-xl text-black">on your next purchase</p>
+              <p class="text-base">use by January 2024</p>
+            </div>
+            <img src="images/cupon-devider.png" alt="" />
+            <div class="raleway-font">
+              <h1 class="text-3xl font-bold">Couple 20</h1>
+              <p class="text-base">Coupon Code</p>
+            </div>
+          </div>
+        </section>
+
+        <div class=" text-center">
+          <button class=" border-fill rounded-xl color-prime text-xl font-bold raleway-font px-8 py-5">See All Offers</button>
+        </div>
+      </section>
+
+      <!-- main-tickit-section -->
+
+      <section class=" bg-[#F7F8F8] border-t-2 border-[#1dd100] rounded-t-[88px] px-28 py-20">
+        <div class=" text-center">
+          <h1 class=" raleway-font font-bold text-4xl text-black mb-6">P.H Paribahan</h1>
+          <p class=" inter-font text-lg font-normal">Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing features allow for a streamlined .</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
