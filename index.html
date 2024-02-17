@@ -319,10 +319,12 @@
             <section class="">
               <!-- driver -->
               <div class="flex justify-end my-5">
-                <button class="btn "><img src="images/drive.svg" alt=""></button>
+                <button class="btn w-28">
+                  <img src="images/drive.svg" alt="" />
+                </button>
               </div>
               <!-- serial-a -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">A</h1>
                 </div>
@@ -346,7 +348,7 @@
                 </div>
               </div>
               <!-- serial-b -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">B</h1>
                 </div>
@@ -370,7 +372,7 @@
                 </div>
               </div>
               <!-- serial-c -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">C</h1>
                 </div>
@@ -394,7 +396,7 @@
                 </div>
               </div>
               <!-- serial-d -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">D</h1>
                 </div>
@@ -418,7 +420,7 @@
                 </div>
               </div>
               <!-- serial-e -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">E</h1>
                 </div>
@@ -442,7 +444,7 @@
                 </div>
               </div>
               <!-- serial-f -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">F</h1>
                 </div>
@@ -466,7 +468,7 @@
                 </div>
               </div>
               <!-- serial-g -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">G</h1>
                 </div>
@@ -490,7 +492,7 @@
                 </div>
               </div>
               <!-- serial-h -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">H</h1>
                 </div>
@@ -514,7 +516,7 @@
                 </div>
               </div>
               <!-- serial-i -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">I</h1>
                 </div>
@@ -538,7 +540,7 @@
                 </div>
               </div>
               <!-- serial-j -->
-              <div class="flex w-full my-5">
+              <div class="flex w-full mb-5">
                 <div class="flex justify-center items-center">
                   <h1 class="items-center p-4">J</h1>
                 </div>
@@ -575,16 +577,74 @@
             </div>
 
             <!-- price-total-card -->
-            <section class="bg-[#F7F8F8] p-6">
+            <section class="bg-[#F7F8F8] p-4 mt-5 rounded-xl">
               <div>
-
+                <table class="w-full text-left">
+                  <thead class="border-dashed border-b-4">
+                    <th class="py-1">
+                      Seat
+                      <span
+                        class="bg-[#1DD100] text-white px-1 py-0 border-none rounded-lg"
+                        >0</span
+                      >
+                    </th>
+                    <th>Class</th>
+                    <th class="text-right">Price</th>
+                  </thead>
+                  <tbody class="border-solid border-b-4">
+                    <tr>
+                      <td class="py-2">C4</td>
+                      <td>Economy</td>
+                      <td class="text-right">550</td>
+                    </tr>
+                    <tr>
+                      <td class="py-2">C4</td>
+                      <td>Economy</td>
+                      <td class="text-right">550</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="flex justify-between items-center py-2">
+                  <h1 class="inter-font font-medium">Total Price:</h1>
+                  <h1 class="inter-font font-medium">BDT <span>1100</span></h1>
+                </div>
+              </div>
+              <label 
+                class="input outline-none border-none focus:outline-none focus:border-none flex items-center gap-2 mt-3"
+              >
+                <input
+                  type="text"
+                  class="grow outline-none border-none focus:outline-none focus:border-none"
+                  placeholder="Have any coupon?"
+                />
+                <span
+                  class="badge badge-info p-4 rounded-lg bg-[#1DD100] text-white"
+                  >Apply</span
+                >
+              </label>
+              <div class="flex justify-between items-center py-5">
+                <h1 class="inter-font font-medium">Grand total:</h1>
+                <h2 class="inter-font font-medium">BDT <span>1100</span></h2>
               </div>
             </section>
+             <!-- Input-area -->
 
+             <form action="">
+              <label for="name" class="inter-font font-semibold text-base text-black">Passenger Name* </label>
+              <input type="text" placeholder="Enter Your Name" class="input w-full border-gray-300 border border-solid focus:outline-none focus:border-none my-2" />
+              <label for="name" class="inter-font font-semibold text-base text-black">Phone Number* </label>
+              <input type="text" placeholder="Enter your Phone Number" class="input w-full border-gray-300 border border-solid focus:outline-none focus:border-none my-2" />
+              <label for="name" class="inter-font font-semibold text-base text-black">Email Id* </label>
+              <input type="text" placeholder="Enter your Email ID" class="input w-full border-gray-300 border border-solid focus:outline-none focus:border-none mt-2" />
+              <Button class="w-full bg-prime p-3 border-none rounded-lg raleway-font font-bold text-white my-6">Next</Button>
+            </form>
+
+            <!-- term & condition -->
+            <div class="flex justify-around items-center"> 
+              <h2 class="underline"><a href="">Term and Conditions</a></h2>
+              <h2 class="underline"><a href="">Cancellation Policy</a></h2>
+            </div>
           </section>
-
-
-
         </section>
       </section>
     </main>
