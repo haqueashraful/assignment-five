@@ -80,7 +80,7 @@ function formSubmit(e) {
   let numberValue = number.value;
   let value = getValue("seatPurchase");
 
-  if (numberValue.length == 11 && value > 0) {
+  if (numberValue.length == 11 && numberValue > 0 && value > 0) {
     console.log("Form submitted successfully.");
     modal.showModal()
     let inputs = document.querySelectorAll("input");
