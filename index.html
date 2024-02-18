@@ -50,9 +50,9 @@
       }
     </style>
   </head>
-  <body class="w-full mx-auto container">
+  <body class="w-full mx-auto lg:container">
     <!-- header section  -->
-    <header class="mx-28 mt-8">
+    <header class="lg:mx-28 md:mx-20 lg:mt-8">
       <!-- nav section -->
 
       <nav class="raleway-font">
@@ -107,11 +107,11 @@
       <!-- banner section -->
 
       <section
-        class="banner-bg bg-cover bg-no-repeat bg-center border rounded-3xl px-48 py-16 my-8 w-full relative"
+        class="banner-bg bg-cover bg-no-repeat bg-center border rounded-3xl lg:px-48 lg:py-16 lg:my-8 w-full relative"
       >
         <!-- banner-content -->
         <div class="text-center space-y-4">
-          <h1 class="raleway-font text-white text-6xl font-extrabold">
+          <h1 class="raleway-font text-white text-2xl lg:text-6xl font-extrabold">
             End-to-End Travel with <br /><span class="color-prime"
               >P Paribahan</span
             >
@@ -129,7 +129,7 @@
           </button>
         </div>
         <div
-          class="flex justify-center items-center gap-6 relative left-0 right-0 top-28"
+          class="flex justify-center items-center gap-1` lg:gap-6 relative left-0 right-0 top-24 lg:top-28"
         >
           <!-- card-one -->
           <div
@@ -171,9 +171,9 @@
       </section>
     </header>
 
-    <main class="mt-36">
+    <main class="lg:mt-36 mt-28">
       <!-- best-offer-section -->
-      <section class="mx-28 mb-32">
+      <section class="lg:mx-28 lg:mb-32">
         <h1
           class="raleway-font font-bold text-4xl text-black text-center mb-12"
         >
@@ -181,7 +181,7 @@
         </h1>
 
         <!-- cuppon-card-section -->
-        <section class="flex justify-center items-center w-full gap-8 mb-16">
+        <section class="flex flex-col lg:flex lg:flex-row justify-center items-center w-full lg:gap-8 mb-16">
           <!-- cuppon-card-one -->
           <div
             class="bg-[#FFBF0F] border-none rounded-3xl w-full flex justify-around items-center"
@@ -214,9 +214,9 @@
           </div>
         </section>
 
-        <div class="text-center">
+        <div class="text-center mb-5 lg:mb-0">
           <button
-            class="border-fill rounded-xl color-prime text-xl font-bold raleway-font px-8 py-5"
+            class="border-fill rounded-xl color-prime text-xl font-bold raleway-font lg:px-8 py-5"
           >
             See All Offers
           </button>
@@ -227,13 +227,13 @@
 
       <section
         id="buyTicket"
-        class="bg-[#F7F8F8] border-t-2 border-[#1dd100] rounded-t-[88px] px-28 py-20"
+        class="bg-[#F7F8F8] border-t-2 border-[#1dd100] rounded-t-[88px] px-2 lg:px-28 lg:py-20"
       >
         <div class="text-center">
-          <h1 class="raleway-font font-bold text-4xl text-black mb-6">
+          <h1 class="raleway-font font-bold text-2xlf lg:text-4xl text-black mb-6">
             P.H Paribahan
           </h1>
-          <p class="inter-font text-lg font-normal">
+          <p class="inter-font text-base lg:text-lg font-normal">
             Yes, you can run unit tests and view the results directly within the
             app. The integrated <br />
             testing features allow for a streamlined .
@@ -241,8 +241,8 @@
         </div>
 
         <!-- ticket-design-section -->
-        <section class="flex items-center bg-white rounded-3xl mt-12">
-          <div class="flex-1 p-8">
+        <section class="lg:flex items-center bg-white rounded-3xl mt-12">
+          <div class="lg:flex-1 p-2 lg:p-8">
             <div class="flex items-center justify-between mb-9">
               <div class="flex justify-center items-center gap-4">
                 <img src="images/bus-logo.png" alt="" />
@@ -285,7 +285,7 @@
               </div>
             </div>
           </div>
-          <img class="" src="images/info-devider.png" alt="" />
+          <img class=" hidden lg:block" src="images/info-devider.png" alt="" />
           <div class="flex flex-col justify-center items-center p-8">
             <img src="images/fare.png" alt="" />
             <h1 class="raleway-font text-2xl font-semibold">550 Taka</h1>
@@ -294,14 +294,14 @@
         </section>
 
         <!-- select-your-seat-section -->
-        <section class="bg-white rounded-3xl p-6 mt-5 flex justify-between">
+        <section class="bg-white rounded-3xl p-2 lg:p-6 mt-5 lg:flex justify-between">
           <!-- seat-design-section -->
-          <section class="w-4/6">
+          <section class="lg:w-4/6 w-full">
             <div class="border-dashed border-b-2">
               <h1 class="py-3">Select Your Seat</h1>
             </div>
             <div
-              class="border-dashed border-b-2 flex justify-between items-center"
+              class="border-dashed border-b-2  flex justify-between items-center"
             >
               <div class="flex items-center gap-2 py-3">
                 <img src="images/seat-gray.png" alt="" />
@@ -653,7 +653,7 @@
           ></div>
 
           <!-- seat-input-section -->
-          <section class="w-2/6">
+          <section class=" w-full lg:w-2/6">
             <div class="border-dashed border-b-2">
               <h1 class="py-3">Select Your Seat</h1>
             </div>
@@ -761,7 +761,7 @@
       </section>
     </main>
 
-    <footer class="p-28 bg-[#030712] text-white">
+    <footer class="lg:p-28 p-2 bg-[#030712] text-white">
       <section class="flex justify-between items-center">
         <div class="space-y-3">
           <h1 class="raleway-font text-4xl font-extrabold text-white">
@@ -786,11 +786,11 @@
         </div>
       </section>
       <hr class="my-6 border-gray-300 border-dashed" />
-      <section class="flex justify-between items-center">
+      <section class="lg:flex justify-between items-center">
         <div>
           <h1>@all rights reserved, P-Ticket services limited.2024</h1>
         </div>
-        <div class="flex justify-between items-center gap-6">
+        <div class="flex justify-between items-center gap-1 lg:gap-6">
           <h1><a href="">Terms & condition</a></h1>
           <h1><a href="">Return & refund policy</a></h1>
           <h1><a href="">Privacy policy</a></h1>
