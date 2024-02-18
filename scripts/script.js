@@ -2,12 +2,15 @@ let clickedButtonsCount = 0;
 const seatSerial = document.getElementById("seat-serial-section");
 let selectedSeats = [];
 
+// Seat-BUtton-Function
+
 seatSerial.addEventListener("click", function (e) {
   if (e.target.tagName === "BUTTON") {
     const buttonText = e.target.innerText;
 
     if (selectedSeats.includes(buttonText)) {
       alert("This seat is already selected.");
+      return;
     }
 
     if (clickedButtonsCount < 4) {
@@ -39,6 +42,7 @@ seatSerial.addEventListener("click", function (e) {
   }
 });
 
+// Coupon-Submit-function
 
 couponBtn.addEventListener("click", () => {
   let couponBtn = document.getElementById("couponBtn");
@@ -60,6 +64,8 @@ couponBtn.addEventListener("click", () => {
     let offerPrice = totalPrice - (totalPrice * 20) / 100;
 
     setValue("grandTotal", offerPrice);
+  }else{
+    alert('Please Enter A Valid Coupon Code')
   }
 });
 
@@ -79,11 +85,18 @@ function modalHide() {
 function formSubmit(e) {
   e.preventDefault();
 
+  // name
+  let name = document.getElementById("name");
+  let nameValue = name.value;
+  // number
   let number = document.getElementById("PhoneNum");
   let numberValue = number.value;
+  // email
+  let email = document.getElementById("email");
+  let emailValue = email.value;
   let value = getValue("seatPurchase");
 
-  if (numberValue.length == 11 && numberValue > 0 && value > 0) {
+  if (numberValue.length == 11 && numberValue > 0 && value > 0 && nameValue !== "" &&  emailValue !== "") {
     console.log("Form submitted successfully.");
     modal.showModal()
     let inputs = document.querySelectorAll("input");
