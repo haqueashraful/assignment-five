@@ -43,16 +43,19 @@ seatSerial.addEventListener("click", function (e) {
 couponBtn.addEventListener("click", () => {
   let couponBtn = document.getElementById("couponBtn");
   let couponInput = document.getElementById("couponInput");
+  let couponLabel = document.getElementById('coupon-label');
   let inputValue = couponInput.value;
 
   if (inputValue === "NEW15") {
     let totalPrice = getValue("totalPrice");
 
     let offerPrice = totalPrice - (totalPrice * 15) / 100;
+    couponLabel.classList.add('hidden')
 
     setValue("grandTotal", offerPrice);
   } else if (inputValue === "Couple 20") {
     let totalPrice = getValue("totalPrice");
+    couponLabel.classList.add('hidden')
 
     let offerPrice = totalPrice - (totalPrice * 20) / 100;
 
