@@ -25,7 +25,7 @@ const newRow = document.createElement("tr");
 const cell1 = document.createElement("td");
 const cell2 = document.createElement("td");
 const cell3 = document.createElement("td");
-cell1.classList.add('py-2')
+cell1.classList.add('py-2', 'tData')
 cell3.classList.add('text-right')
 cell1.textContent = seatNo;
 cell2.textContent = "Economy";

@@ -1,9 +1,15 @@
 let clickedButtonsCount = 0;
 const seatSerial = document.getElementById("seat-serial-section");
+let selectedSeats = [];
 
 seatSerial.addEventListener("click", function (e) {
   if (e.target.tagName === "BUTTON") {
     const buttonText = e.target.innerText;
+
+    if (selectedSeats.includes(buttonText)) {
+      alert("This seat is already selected.");
+    }
+
     if (clickedButtonsCount < 4) {
       setBackground(buttonText);
       clickedButtonsCount++;
@@ -19,6 +25,9 @@ seatSerial.addEventListener("click", function (e) {
 
       let totalPriceAmount = total * 550;
       setValue("totalPrice", totalPriceAmount);
+      setValue('grandTotal', totalPriceAmount)
+ 
+      selectedSeats.push(buttonText);
 
       if (clickedButtonsCount === 4) {
         const couponBtn = document.getElementById("couponBtn");
@@ -30,22 +39,19 @@ seatSerial.addEventListener("click", function (e) {
   }
 });
 
+
 couponBtn.addEventListener("click", () => {
   let couponBtn = document.getElementById("couponBtn");
   let couponInput = document.getElementById("couponInput");
   let inputValue = couponInput.value;
 
-  let inputArray = inputValue.split(" ");
-  let couponString = inputArray.join("");
-  let couponLowerText = couponString.toLowerCase();
-
-  if (couponLowerText === "new15") {
+  if (inputValue === "NEW15") {
     let totalPrice = getValue("totalPrice");
 
     let offerPrice = totalPrice - (totalPrice * 15) / 100;
 
     setValue("grandTotal", offerPrice);
-  } else if (couponLowerText === "couple20") {
+  } else if (inputValue === "Couple 20") {
     let totalPrice = getValue("totalPrice");
 
     let offerPrice = totalPrice - (totalPrice * 20) / 100;
@@ -57,29 +63,31 @@ couponBtn.addEventListener("click", () => {
 // grandTotal
 
 
-function formSubmit(e) {
-    e.preventDefault();
-  
-    let number = document.getElementById("PhoneNum");
-    let numberValue = number.value;
-  
-    if (numberValue.length == 11) {
-      let modal = document.getElementById("modal");
-      modal.classList.remove('hidden')
-      console.log(modal);
-      console.log("checked");
-    } else {
-      alert("Please fill in all required fields.");
-    }
-  }
-
 function buyTicket() {
   const seatSection = document.getElementById("buyTicket");
   seatSection.scrollIntoView({ behavior: "smooth" });
 }
 
 function modalHide() {
-  let modalSection = document.getElementById("modal");
-  modalSection.classList.remove("flex");
-  modalSection.classList.add("hidden");
+  location.reload()
+}
+
+
+function formSubmit(e) {
+  e.preventDefault();
+
+  let number = document.getElementById("PhoneNum");
+  let numberValue = number.value;
+  let value = getValue("seatPurchase");
+
+  if (numberValue.length == 11 && value > 0) {
+    console.log("Form submitted successfully.");
+    modal.showModal()
+    let inputs = document.querySelectorAll("input");
+    inputs.forEach(function(input) {
+      input.value = '';
+    });
+  } else {
+    alert("Please fill in all required fields.");
+  }
 }
