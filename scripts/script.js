@@ -33,8 +33,10 @@ seatSerial.addEventListener("click", function (e) {
       selectedSeats.push(buttonText);
 
       if (clickedButtonsCount === 4) {
+        const couponLabel = document.getElementById('couponInput')
         const couponBtn = document.getElementById("couponBtn");
         couponBtn.removeAttribute("disabled");
+        couponLabel.removeAttribute("disabled")
       }
     } else {
       alert("You can only select up to 4 seats.");
@@ -48,21 +50,26 @@ couponBtn.addEventListener("click", () => {
   let couponBtn = document.getElementById("couponBtn");
   let couponInput = document.getElementById("couponInput");
   let couponLabel = document.getElementById('coupon-label');
+  let discountMoney = document.getElementById('discountArea');
   let inputValue = couponInput.value;
 
   if (inputValue === "NEW15") {
     let totalPrice = getValue("totalPrice");
-
+    let getDiscount = totalPrice * 15/ 100;
+    setValue("discountMoney", getDiscount);
     let offerPrice = totalPrice - (totalPrice * 15) / 100;
     couponLabel.classList.add('hidden')
+    discountMoney.classList.remove('hidden');
 
     setValue("grandTotal", offerPrice);
   } else if (inputValue === "Couple 20") {
     let totalPrice = getValue("totalPrice");
     couponLabel.classList.add('hidden')
-
+    let getDiscount = totalPrice * 20/ 100;
+    setValue("discountMoney", getDiscount);
     let offerPrice = totalPrice - (totalPrice * 20) / 100;
-
+    
+    discountMoney.classList.remove('hidden');
     setValue("grandTotal", offerPrice);
   }else{
     alert('Please Enter A Valid Coupon Code')
